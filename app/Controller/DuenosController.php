@@ -125,7 +125,6 @@ $this->Session->destroy();
     public function add_pet() {
         $usuario = $this->Dueno->findByUsername($this->Session->read('usuario'));
         $this->set('user_id', $usuario['Dueno']['id']);
-        $this->set('user_id', $this->Auth->user('id'));
         if ($this->request->is('post')) {
             $this->Dueno->Mascota->create();
             if ($this->Dueno->Mascota->save($this->request->data)) {

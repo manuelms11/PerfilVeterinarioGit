@@ -89,6 +89,10 @@
                     <span class="pull-left"><a>Agregar Información de Adopciones</a></span>
                     <div id="clear"></div>
                 </li>
+				<li class="list-group-item text-right">
+                    <span class="pull-left"><a>Agregar Información de Adopciones</a></span>
+                    <div id="clear"></div>
+                </li>
                 <li class="list-group-item text-right"><span class="pull-left"><?php
                         echo $this->Html->link(
                                 'Desconectarme', array(
