@@ -1,0 +1,237 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Sans-serif;
+  //background: #2c3e50;
+}
+
+#wrap {
+  margin: 0 auto 30px;
+}
+
+#regbar {
+  height: 45px;
+  background: #000;
+}
+
+#navthing {
+float: right;
+
+}
+
+#navthing p {
+  padding: 7px;
+  color: white;
+  margin: 0;
+  font-size: 22px;
+  float:right;
+  font-family: 'Bangers';
+}
+
+#navthing p a{
+    color: white;
+}
+
+fieldset {
+  border: none;
+}
+
+#login {
+  position: relative;
+  width: 350px;
+  margin-top: 13%;
+  display: none;
+}
+
+.arrow-up {
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-bottom: 15px solid #ECF0F1;
+  left: 40%;
+  position: absolute;
+  top: -10px;
+}
+
+.formholder {
+  background: #ecf0f1;
+  width: 350px;
+  border-radius: 5px;
+  padding-top: 5px;
+}
+
+.formholder input{
+    margin: 5px auto;
+}
+
+.formholder input[type="submit"] {
+  background: #1abc9c;
+  padding: 10px;
+  font-size: 20px;
+  display: block;
+  width: 100%;
+  border: none;
+  color: #fff;
+  border-radius: 5px;
+}
+.formholder input[type="submit"]:hover {
+  background: #1bc6a4;
+}
+
+.randompad {
+  padding: 10px;
+}
+
+.green {
+  color: #1abc9c;
+}
+
+#banner{
+    height: 200px;
+    background: #EAC328;
+}
+
+#menu{
+    background: #000;
+    height: 50px;
+    font-family: 'Bangers';
+    font-size: 28px;
+    color: white;
+}
+
+#menu ul li{
+    list-style: none;
+}
+
+#menu a{
+   font-size: 24px;
+   color: white; 
+   cursor: pointer;
+}
+
+#menu ul{
+    padding: 5px;
+}
+
+#main{
+    max-width: 1100px;
+    margin: 75px auto;
+    /*border: double rgb(237, 209, 148) 1px;
+    padding: 15px;*/
+    border-radius: 6px 6px 6px 6px;
+}
+
+#main label{
+    font-size: 18px;
+}
+#footer{
+    background: #000;
+}
+
+#DuenoAddForm label{
+    float: left;
+    font-size: 18px;
+    color: rgb(104, 104, 113);
+}
+
+#DuenoAddForm input{
+    float:right;
+    max-width: 300px;
+    height: 35px
+}
+
+#DuenoAddForm button{
+    font-size: 18px;
+}
+
+#addForm{
+    max-width: 500px;
+  margin: 5px 30px;
+}
+
+#addForm legend{
+    font-size: 26px;
+    font-weight: bold;
+}
+
+#buscadorVet{
+    max-width: 300px;
+    font-size: 16px;
+}
+
+#clear{
+    clear: both;
+}
+
+#listVets{
+    font-size: 17px;
+    font-family: cursive;
+    border: solid 1px lightgrey;
+    border-radius: 0 0 6px 6px;
+}
+
+#listVets .glyphicon{
+    font-size: 16px;
+}
+
+.panelVets{
+    border: solid 2px black;
+    margin: 15px auto;
+    border-radius: 6px 6px 6px 6px;
+    color: #888;
+}
+
+#buscador{
+    border: solid 1px lightgrey;
+    background: #EAC328;
+    border-radius: 6px 6px 0 0;
+    padding: 20px 20px 50px 20px;
+}
+
+
+#main h1{
+    font-weight: bold;
+}
+
+.oculto{
+    display: none;
+}
+
+#main .list-group-item{
+    background: black;
+    color: white;
+
+}
+#main .list-group-item a{
+    color: white;
+    font-family: 'Chewy';
+    font-size: 18px;
+}
+
+#main .list-group{
+    border-radius: 6px 6px 6px 6px;
+}
+
+#mascotas{
+    margin: 5px 30px;
+}
+
+#mascotas ul{
+    list-style-type: none;
+}
+
+.petInfo{
+    border: solid 1px black;
+    padding: 20px;
+    border-radius: 6px 6px 6px 6px;
+}
+
+.petInfo .infoPet{
+    padding: 15px;
+}
