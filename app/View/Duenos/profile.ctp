@@ -72,7 +72,7 @@
                 <li class="list-group-item text-right">
                     <span class="pull-left"><?php
                         echo $this->Html->link(
-                                'Añadir mascotas', '/users/add_pet'
+                                'Añadir mascotas', '/duenos/add_pet'
                         );
                         ?></span>
                     <div id="clear"></div>
