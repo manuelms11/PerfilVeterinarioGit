@@ -6,7 +6,7 @@
  * and open the template in the editor.
  */
 
-class VacunasController extends AppController {
+class DesparacitantesController extends AppController {
     public function beforeFilter() {
 		parent::beforeFilter();
 		// Allow users to register and logout.
@@ -18,9 +18,9 @@ class VacunasController extends AppController {
     
     public function add(){
         if ($this->request->is('post')) {
-            $this->Vacuna->create();
-            if ($this->Vacuna->save($this->request->data)) {
-                $this->Session->setFlash(__('Se ha añadido una mascota'));
+            $this->Desparacitante->create();
+            if ($this->Desparacitante->save($this->request->data)) {
+                $this->Session->setFlash(__('Se ha añadido un '));
                 return $this->redirect(array('controller'=>'users', 'action' => 'index'));
             }
             $this->Session->setFlash(
@@ -31,21 +31,20 @@ class VacunasController extends AppController {
 	
 	public function findVac($id = null){
 		
-		$vac = $this->Vacuna->findById($id);
-		return $vac['Vacuna']['tipo'];
+		$desp = $this->Desparacitante->findById($id);
+		return $vac['Desparacitante']['nombre'];
 		
 	}
 	
-	public function add_vacpet($id = null) {
-		// $userId = $this->Auth->user('id');
-		// $usuario = $this->Dueno->findById($userId);
-
-		$vac = $this->Vacuna->find('list', array('fields'=>'id, tipo'));
-        if (!$vac) {
-            throw new NotFoundException(__('No existen vacunas para elegir'));
-        }
-        $this->set('vaccines', $vac);
-		$this->set('idmascota', $id);
+	public function add_despPet($id = null) {
+            // $userId = $this->Auth->user('id');
+            // $usuario = $this->Dueno->findById($userId);
+            $desp = $this->Desparacitante->find('list', array('fields'=>'id, nombre'));
+            if (!$desp) {
+                throw new NotFoundException(__('No existen desparacitantes para elegir'));
+            }
+            $this->set('desparacitante', $vac);
+	    $this->set('idmascota', $id);
 		// if ($this->request->is('post')) {
             // $this->Dueno->Mascota->create();
             // if ($this->Dueno->Mascota->save($this->request->data)) {

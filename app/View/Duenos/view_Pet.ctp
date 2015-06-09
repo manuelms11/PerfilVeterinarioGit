@@ -116,6 +116,31 @@
             echo $this->Html->image('vacuna.gif', array('alt' => 'Sin vacunas'));
         }
         ?>
+        <h1>Desparacitaciones</h1>
+        <?php
+        $desparacitaciones = $mascota['RegistroDesparacitacion'];
+        if ($desparacitaciones) {
+            echo "<ul>";
+            foreach ($desparacitaciones as $desparacitacion) {
+                echo "<li class='petInfo col-md-12'>";
+                echo '<div class="pull-left infoPet">';
+                echo "<br>";
+                echo "Tipo: " . $this->requestAction('/desparacitaciones/findDesp/ ' . $desparacitacion['iddesparacitante']);
+                echo "<br>";
+				//echo "Fecha: " . $vacuna['fechavacuna'];    
+                echo "<br>";
+                echo '</div';
+                echo "</li>";
+            }
+            echo '</ul>';
+        } else {   
+            echo '<h3>';
+            echo "Ningun desparacitante agregado";    
+            echo '</h3>';
+            echo $this->Html->image('vacuna.gif', array('alt' => 'Sin vacunas'));
+        }
+        ?>
+        
     </div>
     <br><br>
     <div id='clear'></div>
