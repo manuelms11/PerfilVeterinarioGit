@@ -84,7 +84,9 @@
                     <div id="clear"></div>
                 </li>
                 <li class="list-group-item text-right">
-                    <span class="pull-left"><a>Agregar Desparacitación</a></span>
+                     <span class="pull-left"><?php
+						echo $this->Html->link('Agregar Desparacitación', '/desparacitantes/add_despet/' . $mascota['Mascota']['id']);
+                        ?></span>
                     <div id="clear"></div>
                 </li>
             </ul>

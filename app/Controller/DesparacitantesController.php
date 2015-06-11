@@ -36,7 +36,7 @@ class DesparacitantesController extends AppController {
 		
 	}
 	
-	public function add_despPet($id = null) {
+	public function add_despet($id = null) {
             // $userId = $this->Auth->user('id');
             // $usuario = $this->Dueno->findById($userId);
             $desp = $this->Desparacitante->find('list', array('fields'=>'id, nombre'));
