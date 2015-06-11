@@ -6,7 +6,7 @@
  * and open the template in the editor.
  */
 
-class RegistroDeparacitacionesController extends AppController {
+class RegistroDesparacitacionController extends AppController {
     public function beforeFilter() {
     parent::beforeFilter();
     // Allow users to register and logout.

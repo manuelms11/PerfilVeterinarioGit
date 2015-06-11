@@ -7,7 +7,7 @@ class Registrovacuna extends AppModel {
 	public $useTable = 'registrovacunas';
 	
     public $validate = array(
-		'idmascota' => array(
+	'idmascota' => array(
             'required' => array(
                 'rule' => array('notEmpty'),
                 'message' => 'Error con el identificador de la mascota'
@@ -47,6 +47,8 @@ class Registrovacuna extends AppModel {
             );
         }
         return true;
-    }
+}
+
+
 
 }

@@ -38,9 +38,9 @@ class Desparacitante extends AppModel {
     }
 
 public $hasMany = array(
-    'registrodesparacitaciones'=>array(
+    'RegistroDesparacitaciones'=>array(
         'className'=>'registrodesparacitaciones',//tabla
-        'foreignKey'=>'iddesparacitante'//llave foranea de Vacuna
+        'foreignKey'=>'iddesparacitante'//llave foranea de Despara
     )
 );
 

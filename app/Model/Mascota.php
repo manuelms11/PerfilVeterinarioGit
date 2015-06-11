@@ -25,11 +25,15 @@ class Mascota extends AppModel {
         )
     );
 
-	public $hasMany = array(
+	
+    public $hasMany = array(
     'Registrovacuna'=>array(
         'className'=>'registrovacunas',//tabla
-        'foreignKey'=>'idmascota'//llave foranea de Mascota
-    )
-);
-	
+        'foreignKey'=>'id'//llave foranea de Mascota
+        ),
+    'RegistroDesparacitaciones'=>array(
+        'className'=>'registrodesparacitaciones',//tabla
+        'foreignKey'=>'id'//llave foranea de Despara
+        )    
+    );	
 }

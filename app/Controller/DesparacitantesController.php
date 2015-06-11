@@ -29,10 +29,10 @@ class DesparacitantesController extends AppController {
         }
     }
 	
-	public function findVac($id = null){
+	public function findDesp($id = null){
 		
 		$desp = $this->Desparacitante->findById($id);
-		return $vac['Desparacitante']['nombre'];
+		return $desp['Desparacitante']['nombre'];
 		
 	}
 	
@@ -43,7 +43,7 @@ class DesparacitantesController extends AppController {
             if (!$desp) {
                 throw new NotFoundException(__('No existen desparacitantes para elegir'));
             }
-            $this->set('desparacitante', $vac);
+            $this->set('desparacitante', $desp);
 	    $this->set('idmascota', $id);
 		// if ($this->request->is('post')) {
             // $this->Dueno->Mascota->create();

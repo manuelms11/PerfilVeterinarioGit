@@ -2,9 +2,9 @@
 App::uses('AppModel', 'Model');
 App::uses('BlowfishPasswordHasher', 'Controller/Component/Auth');
 
-class Registrovacuna extends AppModel {
+class RegistroDesparacitacion extends AppModel {
 	
-	public $useTable = 'registrovacunas';
+	public $useTable = 'registrodesparacitaciones';
 	
     public $validate = array(
 	'idmascota' => array(
