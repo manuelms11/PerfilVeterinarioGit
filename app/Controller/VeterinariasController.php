@@ -10,6 +10,16 @@ class VeterinariasController extends AppController {
     public $components = array('RequestHandler');
     public $helpers = array('Js');
     public $paginate;
+	 public $uses = array('Veterinaria', 'Dueno');
+    
+    public function beforeFilter() {
+        if ($this->Session->read('usuario')) {
+            $usuario = $this->Dueno->findByUsername($this->Session->read('usuario'));
+            //var_dump($usuario);
+            $this->set('nombre', $usuario['Dueno']['nombre']);
+        }
+    }
+
      public function index(){
          $this->Veterinaria->recursive =0;
          

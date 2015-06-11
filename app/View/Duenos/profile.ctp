@@ -72,7 +72,7 @@
                 <li class="list-group-item text-right">
                     <span class="pull-left"><?php
                         echo $this->Html->link(
-                                'Añadir mascotas', '/duenos/add_pet'
+                                'Añadir mascotas', '/users/add_pet'
                         );
                         ?></span>
                     <div id="clear"></div>
@@ -81,18 +81,28 @@
                     <span class="pull-left"><a>Eliminar Mascotas</a></span>
                     <div id="clear"></div>
                 </li>
+                <?php 
+                    if($user['Dueno']['admin']==1){
+                ?>
+                
                 <li class="list-group-item text-right">
                     <span class="pull-left"><a>Agregar Información de Veterinarias</a></span>
                     <div id="clear"></div>
                 </li>
                 <li class="list-group-item text-right">
-                    <span class="pull-left"><a>Agregar Información de Adopciones</a></span>
+                    <span class="pull-left"><?php
+                        echo $this->Html->link(
+                                'Aprobar Adopciones', 
+                                array(
+                            'controller' => 'adopciones',
+                            'action' => 'porAprobar')
+                        );
+                        ?></span>
                     <div id="clear"></div>
                 </li>
-				<li class="list-group-item text-right">
-                    <span class="pull-left"><a>Agregar Información de Adopciones</a></span>
-                    <div id="clear"></div>
-                </li>
+                <?php
+                    }
+                ?>
                 <li class="list-group-item text-right"><span class="pull-left"><?php
                         echo $this->Html->link(
                                 'Desconectarme', array(

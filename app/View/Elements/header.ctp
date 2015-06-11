@@ -100,7 +100,17 @@
                 ));
         ?>
         </li>
-        <li class="col-md-3"><a>Adopciones</a></li>
+        <li class="col-md-3">
+            <?php
+            echo $this->Html->link(
+                'Adopciones',
+                array(
+                     'controller' => 'adopciones',
+                     'action' => 'listaAdopciones',
+                     'full_base' => true
+                ));
+        ?>
+        </li>
         <li class="col-md-1"></li>
     </ul>
 </div>

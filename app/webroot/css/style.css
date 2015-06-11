@@ -21,7 +21,12 @@ body {
 
 #navthing {
 float: right;
+}
 
+pre{
+    font-family: 'Chewy';
+    font-size: 18px;
+    background: white;
 }
 
 #navthing p {
@@ -134,28 +139,39 @@ fieldset {
     background: #000;
 }
 
-#DuenoAddForm label{
+#DuenoAddForm label, #AdopcioneAddForm label{
     float: left;
     font-size: 18px;
     color: rgb(104, 104, 113);
 }
+#AdopcioneAddForm .form-group{
+    margin: 15px 0;
+}
 
-#DuenoAddForm input{
+#DuenoAddForm input, #AdopcioneAddForm input, #AdopcioneAddForm select{
     float:right;
     max-width: 300px;
     height: 35px
 }
 
-#DuenoAddForm button{
+#AdopcioneAddForm button{
+    margin: 5% 0;
+}
+
+#DuenoAddForm button, #AdopcioneAddForm button{
     font-size: 18px;
+}
+#AdopcioneAddForm{
+    max-width: 600px;
+    margin: 5px auto;
 }
 
 #addForm{
-    max-width: 500px;
+ max-width: 500px;
   margin: 5px 30px;
 }
 
-#addForm legend{
+#addForm legend, #AdopcionesAddForm legend{
     font-size: 26px;
     font-weight: bold;
 }
