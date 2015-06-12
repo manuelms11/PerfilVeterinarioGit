@@ -21,7 +21,7 @@ class RegistroDesparacitacionController extends AppController {
             $this->RegistroDesparacitacion->create();
             if ($this->RegistroDesparacitacion->save($this->request->data)) {
                 $this->Session->setFlash(__('Se ha añadido una desparacitacion'));
-                return $this->redirect(array('controller'=>'users', 'action' => 'index'));
+                return $this->redirect(array('controller'=>'duenos', 'action' => 'profile'));
             }
             $this->Session->setFlash(
                 __('No se creo la desparacitacion, trate de nuevo')

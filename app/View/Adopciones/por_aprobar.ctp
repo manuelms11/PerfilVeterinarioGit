@@ -8,7 +8,7 @@
     );
 ?>
 <div id="main">
-    <h3 class="pull-left">Adopciones por aprobar</h3>
+    <p class="title1">Adopciones por aprobar</p>
     <br>
     <div id="panel-adopciones">
         <?php

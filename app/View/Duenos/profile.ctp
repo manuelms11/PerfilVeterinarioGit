@@ -117,16 +117,16 @@
         </div>
         <div id='clear'></div>
     </div>
-    <br><br>
+
     
     <div id='mascotas' class="pull-left col-md-8">
-        <h1>Mascotas</h1>
+        <p class="title1">Mascotas</p>
         <?php
         $mascotas = $user['Mascota'];
         if ($mascotas) {
             echo "<ul>";
             foreach ($mascotas as $mascota) {
-                echo "<li class='petInfo col-md-12'>";
+                echo "<li class='petInfo2 col-md-12'>";
                 echo "<div class='pull-left fotoPet'>";
                 if (empty($mascota['foto'])) {
                         echo $this->Html->image('no-foto.jpg', array('alt' => 'Sin foto', 'width' => '100px', 'height' => '100px'));

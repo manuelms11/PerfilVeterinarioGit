@@ -114,17 +114,18 @@
                 echo '<h5>';
                 echo "Ninguna vacuna agregada";    
                 echo '</h5>';
-                echo $this->Html->image('vacuna.gif', array('alt' => 'Sin vacunas'));
+                
             }
             ?>
         </div>
         <div id='mascotas' class="pull-left col-md-8">
          <p class="title1">Desparacitaciones</p>
         <?php
-        $desparacitaciones = $mascota['RegistroDesparacitacion'];
-        if ($desparacitaciones) {
+        $desps = $mascota['RegistroDesparacitacion'];
+        /* @var $desparacitaciones type */
+        if ($desps) {
             echo "<ul>";
-            foreach ($desparacitaciones as $desparacitacion) {
+            foreach ($desps as $desparacitacion) {
                 echo "<li class='petInfo2 col-md-12'>";
                 echo '<div class="pull-left infoPet2">';
                 echo "Tipo: " . $this->requestAction('/desparacitaciones/findDesp/ ' . $desparacitacion['iddesparasitante']);
@@ -139,7 +140,7 @@
             echo '<h5>';
             echo "Ningun desparacitante agregado";    
             echo '</h5>';
-            echo $this->Html->image('vacuna.gif', array('alt' => 'Sin vacunas'));
+            
         }
         ?>
     </div>

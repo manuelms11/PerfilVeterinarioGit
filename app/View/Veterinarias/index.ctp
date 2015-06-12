@@ -55,9 +55,9 @@
                 foreach ($vets as $veterinaria) {
                     echo '<div class="panelVets col-md-12">';
                     echo '<div class="panel-body">';
-                    echo '<span class="glyphicon glyphicon-home" aria-hidden="true"> </span> ' . $veterinaria['Veterinaria']['Nombre'] . '<br>';
-                    echo '<span class="glyphicon glyphicon-map-marker" aria-hidden="true"> </span> ' . $veterinaria['Veterinaria']['Direccion'] . ', ' . $veterinaria['Veterinaria']['Canton'] . ', ' . $veterinaria['Veterinaria']['Provincia'] . '<br>';
-                    echo '<span class="glyphicon glyphicon-phone-alt" aria-hidden="true"> </span> ' . $veterinaria['Veterinaria']['Contacto'] . '<br>';
+                    echo '<span class="glyphicon glyphicon-home" aria-hidden="true">   </span><span class="vetText">'. $veterinaria['Veterinaria']['Nombre'] . '</span> <br>';
+                    echo '<span class="glyphicon glyphicon-map-marker" aria-hidden="true">   </span><span class="vetText">' . $veterinaria['Veterinaria']['Direccion'] . ', ' . $veterinaria['Veterinaria']['Canton'] . ', ' . $veterinaria['Veterinaria']['Provincia'] . '</span><br>';
+                    echo '<span class="glyphicon glyphicon-phone-alt" aria-hidden="true">   </span><span class="vetText">' . $veterinaria['Veterinaria']['Contacto'] . '</span><br>';
                     echo '</div>';
                     echo '</div>';
                 }

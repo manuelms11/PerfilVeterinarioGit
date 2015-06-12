@@ -20,7 +20,7 @@ class RegistroconsultasController extends AppController {
             $this->Registroconsulta->create();
             if ($this->Registroconsulta->save($this->request->data)) {
                 $this->Session->setFlash(__('Se ha añadido una Consulta'));
-                return $this->redirect(array('controller'=>'users', 'action' => 'index'));
+                return $this->redirect(array('controller'=>'duenos', 'action' => 'profile'));
             }
             $this->Session->setFlash(
                 __('No se creo la Consulta, trate de nuevo')

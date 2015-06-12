@@ -7,9 +7,8 @@
 ?> 
 
 
-
-
-
 <div id="main">
-    No se que poner aqui
+    <div class="index1">
+        <p>Bienvenidos</p>
+    </div>
 </div>
