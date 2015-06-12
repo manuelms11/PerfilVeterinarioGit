@@ -137,31 +137,32 @@ fieldset {
 }
 #footer{
     background: #000;
+    height: 50px;
 }
 
-#DuenoAddForm label, #AdopcioneAddForm label{
+#DuenoAddForm label, #AdopcioneAddForm label, #AdopcioneEditForm label{
     float: left;
     font-size: 18px;
     color: rgb(104, 104, 113);
 }
-#AdopcioneAddForm .form-group{
+#AdopcioneAddForm .form-group, #AdopcioneEditForm .form-group{
     margin: 15px 0;
 }
 
-#DuenoAddForm input, #AdopcioneAddForm input, #AdopcioneAddForm select{
+#DuenoAddForm input, #AdopcioneAddForm input, #AdopcioneAddForm select, #AdopcioneEditForm input, #AdopcioneEditForm select{
     float:right;
     max-width: 300px;
     height: 35px
 }
 
-#AdopcioneAddForm button{
+#AdopcioneAddForm button, #AdopcioneEditForm button{
     margin: 5% 0;
 }
 
 #DuenoAddForm button, #AdopcioneAddForm button{
     font-size: 18px;
 }
-#AdopcioneAddForm{
+#AdopcioneAddForm, #AdopcioneEditForm{
     max-width: 600px;
     margin: 5px auto;
 }
@@ -251,3 +252,24 @@ fieldset {
 .petInfo .infoPet{
     padding: 15px;
 }
+
+
+.info-adopcion{
+    padding: 20px;
+}
+
+.info-adopcion ul{
+    padding: 5px;
+}
+
+.info-adopcion ul li{
+    list-style: none;
+    padding-left: 3%;
+    font-family: 'Chewy';
+    font-size: 16px;
+}
+
+h3, h4, h1,h2,h6, h5{
+    font-family:'Bangers'
+}
+

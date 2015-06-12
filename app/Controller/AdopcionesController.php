@@ -3,6 +3,7 @@
 
 class AdopcionesController extends AppController{
     public $uses = array('Adopcione', 'Dueno');
+    public $paginate;
      
     public function beforeFilter() {
         if ($this->Session->read('usuario')) {
@@ -13,12 +14,20 @@ class AdopcionesController extends AppController{
     }
     
     public function listaAdopciones(){
-        $adop = $this->Adopcione->find('all', array('Adopciones.aprobado'=>'0'));
+        $this->paginate['Adopcione']['limit'] = 5;
+        $this->paginate['Adopcione']['order'] = array('Adopcione.id' => 'asc');
+        $this->paginate['Adopcione']['conditions']['Adopcione.aprobado'] = 0;
+        $adop = $this->paginate();
+        //$adop = $this->Adopcione->find('all', array('Adopciones.aprobado'=>'0'));
         $this->set('adops', $adop);
     }
    
     public function porAprobar(){
-        $adop = $this->Adopcione->find('all', array('Adopciones.aprobado'=>'1'));
+        $this->paginate['Adopcione']['limit'] = 5;
+        $this->paginate['Adopcione']['order'] = array('Adopcione.id' => 'asc');
+        $this->paginate['Adopcione']['conditions']['Adopcione.aprobado'] = 1;
+        $adop = $this->paginate();
+        //$adop = $this->Adopcione->find('all', array('Adopciones.aprobado'=>'0'));
         $this->set('adops', $adop);
     }
     
@@ -75,10 +84,12 @@ class AdopcionesController extends AppController{
     }
     
     public function edit($id = null){
-        $adopcion = $this->Adopcione->finById($id);
+        $adopcion = $this->Adopcione->findById($id);
         if (!$adopcion) {
             $this->Session->setFlash(_('La mascota no existe'));
+            return $this->redirect(array('action'=>'listaAdopciones'));
         }
+        $this->set('ado', $adopcion);
         if ($this->request->is('post', 'put')) {
             if ($this->Adopcione->save($this->request->data)) {
                 $this->Session->setFlash(_('Adopcion editada con exito'));
