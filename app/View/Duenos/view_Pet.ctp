@@ -94,15 +94,14 @@
         <div id='clear'></div>
     </div>
 	<div id='mascotas' class="pull-left col-md-8">
-        <h1>Vacunas</h1>
+        <p class="title1">Vacunas</p>
         <?php
         $vacunas = $mascota['Registrovacuna'];
         if ($vacunas) {
             echo "<ul>";
             foreach ($vacunas as $vacuna) {
-                echo "<li class='petInfo col-md-12'>";
-                echo '<div class="pull-left infoPet">';
-                echo "<br>";
+                echo "<li class='petInfo2 col-md-12'>";
+                echo '<div class="pull-left infoPet2">';
                 echo "Tipo: " . $this->requestAction('/vacunas/findVac/ ' . $vacuna['idvacuna']);
                 echo "<br>";
 				echo "Fecha: " . $vacuna['fechavacuna'];    
@@ -112,21 +111,20 @@
             }
             echo '</ul>';
         } else {   
-            echo '<h3>';
+            echo '<h5>';
             echo "Ninguna vacuna agregada";    
-            echo '</h3>';
+            echo '</h5>';
             echo $this->Html->image('vacuna.gif', array('alt' => 'Sin vacunas'));
         }
         ?>
-         <h1>Desparacitaciones</h1>
+         <p class="title1">Desparacitaciones</p>
         <?php
         $desparacitaciones = $mascota['RegistroDesparacitacion'];
         if ($desparacitaciones) {
             echo "<ul>";
             foreach ($desparacitaciones as $desparacitacion) {
-                echo "<li class='petInfo col-md-12'>";
-                echo '<div class="pull-left infoPet">';
-                echo "<br>";
+                echo "<li class='petInfo2 col-md-12'>";
+                echo '<div class="pull-left infoPet2">';
                 echo "Tipo: " . $this->requestAction('/desparacitaciones/findDesp/ ' . $desparacitacion['iddesparacitante']);
                 echo "<br>";
 				//echo "Fecha: " . $vacuna['fechavacuna'];    
@@ -136,9 +134,9 @@
             }
             echo '</ul>';
         } else {   
-            echo '<h3>';
+            echo '<h5>';
             echo "Ningun desparacitante agregado";    
-            echo '</h3>';
+            echo '</h5>';
             echo $this->Html->image('vacuna.gif', array('alt' => 'Sin vacunas'));
         }
         ?>
