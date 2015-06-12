@@ -8,7 +8,7 @@
             <legend><?php echo __('Editar Adopción'); ?></legend>
             <?php
                 echo $this->Form->input('Adopcione.id', array('type' => 'hidden', 'value'=>$ado['Adopcione']['id']));
-                ?>
+            ?>
             <div class="form-group">
                 <?php
                 echo $this->Form->input('Adopcione.nombre_mascota', array('label' => 'Nombre: ', 'class' => 'form-control', 'value'=>$ado['Adopcione']['nombre_mascota']));
