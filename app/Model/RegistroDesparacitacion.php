@@ -3,8 +3,8 @@ App::uses('AppModel', 'Model');
 App::uses('BlowfishPasswordHasher', 'Controller/Component/Auth');
 
 class RegistroDesparacitacion extends AppModel {
-	
-	public $useTable = 'registrodesparacitaciones';
+
+    public $useTable = 'registrodesparacitaciones';
 	
     public $validate = array(
 	'idmascota' => array(
@@ -13,7 +13,7 @@ class RegistroDesparacitacion extends AppModel {
                 'message' => 'Error con el identificador de la mascota'
             )
         ),
-        'iddesparacitante' => array(
+        'iddesparasitante' => array(
             'required' => array(
                 'rule' => array('notEmpty'),
                 'message' => 'Error con el identificador del desparacitante'

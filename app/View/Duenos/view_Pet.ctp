@@ -94,29 +94,31 @@
         <div id='clear'></div>
     </div>
 	<div id='mascotas' class="pull-left col-md-8">
-        <p class="title1">Vacunas</p>
-        <?php
-        $vacunas = $mascota['Registrovacuna'];
-        if ($vacunas) {
-            echo "<ul>";
-            foreach ($vacunas as $vacuna) {
-                echo "<li class='petInfo2 col-md-12'>";
-                echo '<div class="pull-left infoPet2">';
-                echo "Tipo: " . $this->requestAction('/vacunas/findVac/ ' . $vacuna['idvacuna']);
-                echo "<br>";
-				echo "Fecha: " . $vacuna['fechavacuna'];    
-                echo "<br>";
-                echo '</div';
-                echo "</li>";
+            <p class="title1">Vacunas</p>
+            <?php
+            $vacunas = $mascota['Registrovacuna'];
+            if ($vacunas) {
+                echo "<ul>";
+                foreach ($vacunas as $vacuna) {
+                    echo "<li class='petInfo2 col-md-12'>";
+                    echo '<div class="pull-left infoPet2">';
+                    echo "<p>Tipo: " . $this->requestAction('/vacunas/findVac/ ' . $vacuna['idvacuna']);
+                    echo "</p>";
+                    echo "<p>Fecha: " . $vacuna['fechavacuna'];    
+                    echo "</p>";
+                    echo '</div';
+                    echo "</li>";
+                }
+                echo '</ul>';
+            } else {   
+                echo '<h5>';
+                echo "Ninguna vacuna agregada";    
+                echo '</h5>';
+                echo $this->Html->image('vacuna.gif', array('alt' => 'Sin vacunas'));
             }
-            echo '</ul>';
-        } else {   
-            echo '<h5>';
-            echo "Ninguna vacuna agregada";    
-            echo '</h5>';
-            echo $this->Html->image('vacuna.gif', array('alt' => 'Sin vacunas'));
-        }
-        ?>
+            ?>
+        </div>
+        <div id='mascotas' class="pull-left col-md-8">
          <p class="title1">Desparacitaciones</p>
         <?php
         $desparacitaciones = $mascota['RegistroDesparacitacion'];
@@ -125,7 +127,7 @@
             foreach ($desparacitaciones as $desparacitacion) {
                 echo "<li class='petInfo2 col-md-12'>";
                 echo '<div class="pull-left infoPet2">';
-                echo "Tipo: " . $this->requestAction('/desparacitaciones/findDesp/ ' . $desparacitacion['iddesparacitante']);
+                echo "Tipo: " . $this->requestAction('/desparacitaciones/findDesp/ ' . $desparacitacion['iddesparasitante']);
                 echo "<br>";
 				//echo "Fecha: " . $vacuna['fechavacuna'];    
                 echo "<br>";

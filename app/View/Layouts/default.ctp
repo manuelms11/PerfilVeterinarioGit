@@ -57,7 +57,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 			<?php echo $this->fetch('content'); ?>
 		</div>
 		<div id="footer">
-			footer
+			Pets & Friends v1.0 - 2015
 			
 		</div>
 	</div>

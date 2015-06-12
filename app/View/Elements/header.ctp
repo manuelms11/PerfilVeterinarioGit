@@ -70,7 +70,7 @@
 <div id="banner">
     <?php
     echo $this->Html->image('logo.png', array('alt' => 'CakePHP', 'height'=>'200px', 'width'=>'400px', 'class'=>'pull-left'));
-    echo $this->Html->image('pets.png', array('alt' => 'CakePHP', 'height'=>'200px', 'width'=>'400px', 'class'=>'pull-right'));
+    echo $this->Html->image('pets.png', array('alt' => 'CakePHP', 'height'=>'200px', 'width'=>'400px', 'class'=>'pull-right logo'));
     ?>
    
 </div>
@@ -78,7 +78,7 @@
 <div id="menu" class="col-md-12">
     <ul class="col-md-12">
         <li class="col-md-2"></li>
-        <li class="col-md-3">
+        <li class="col-md-3 menu">
         <?php
             echo $this->Html->link(
                 'Inicio',
@@ -89,7 +89,7 @@
                 ));
         ?>
         </li>
-        <li class="col-md-3">
+        <li class="col-md-3 menu">
             <?php
             echo $this->Html->link(
                 'Veterinarias',
@@ -100,7 +100,7 @@
                 ));
         ?>
         </li>
-        <li class="col-md-3">
+        <li class="col-md-3 menu">
             <?php
             echo $this->Html->link(
                 'Adopciones',
