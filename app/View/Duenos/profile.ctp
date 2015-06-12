@@ -72,7 +72,7 @@
                 <li class="list-group-item text-right">
                     <span class="pull-left"><?php
                         echo $this->Html->link(
-                                'Añadir mascotas', '/users/add_pet'
+                                'Añadir mascotas', '/duenos/add_pet'
                         );
                         ?></span>
                     <div id="clear"></div>
@@ -82,7 +82,7 @@
                     <div id="clear"></div>
                 </li>
                 <?php 
-                    if($user['Dueno']['admin']==1){
+                    if($user['Dueno']['tipo_usuario']==1){
                 ?>
                 
                 <li class="list-group-item text-right">
