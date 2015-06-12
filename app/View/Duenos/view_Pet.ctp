@@ -84,7 +84,9 @@
                     <div id="clear"></div>
                 </li>
                 <li class="list-group-item text-right">
-                    <span class="pull-left"><a>Agregar Desparacitación</a></span>
+                     <span class="pull-left"><?php
+						echo $this->Html->link('Agregar Desparacitación', '/desparacitantes/add_despet/' . $mascota['Mascota']['id']);
+                        ?></span>
                     <div id="clear"></div>
                 </li>
             </ul>
@@ -112,6 +114,30 @@
         } else {   
             echo '<h3>';
             echo "Ninguna vacuna agregada";    
+            echo '</h3>';
+            echo $this->Html->image('vacuna.gif', array('alt' => 'Sin vacunas'));
+        }
+        ?>
+         <h1>Desparacitaciones</h1>
+        <?php
+        $desparacitaciones = $mascota['RegistroDesparacitacion'];
+        if ($desparacitaciones) {
+            echo "<ul>";
+            foreach ($desparacitaciones as $desparacitacion) {
+                echo "<li class='petInfo col-md-12'>";
+                echo '<div class="pull-left infoPet">';
+                echo "<br>";
+                echo "Tipo: " . $this->requestAction('/desparacitaciones/findDesp/ ' . $desparacitacion['iddesparacitante']);
+                echo "<br>";
+				//echo "Fecha: " . $vacuna['fechavacuna'];    
+                echo "<br>";
+                echo '</div';
+                echo "</li>";
+            }
+            echo '</ul>';
+        } else {   
+            echo '<h3>';
+            echo "Ningun desparacitante agregado";    
             echo '</h3>';
             echo $this->Html->image('vacuna.gif', array('alt' => 'Sin vacunas'));
         }
