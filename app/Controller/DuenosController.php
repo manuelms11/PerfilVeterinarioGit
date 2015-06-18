@@ -18,13 +18,32 @@ class DuenosController extends AppController {
 }
 
 public function index(){
-//    if($this->Session->read('usuario')){
-//       $usuario = $this->Dueno->findByUsername($this->Session->read('usuario'));
-//       $this->set('nombre', $usuario['nombre']);
-//    }
-    
-    
 }
+
+
+public function listaUsuarios(){
+    $usuario = $this->Dueno->findByUsername($this->Session->read('usuario'));
+        if($usuario['Dueno']['tipo_usuario']==0){
+            $this->redirect(array('controller'=>'Dueno', 'action'=>'index'));
+        }
+    $duennosList = $this->Dueno->find('all');
+    $this->set('listaDuenos', $duennosList);
+}
+
+public function cambiar($val){
+    $this->autoRender = false;
+    $usuario = $this->Dueno->findById($val);
+    if($usuario){
+        $this->Dueno->id = $val;
+        if($usuario['Dueno']['tipo_usuario']==0){//cambiar a tipo_usuario
+            $this->Dueno->saveField('tipo_usuario', 1);
+        }else{
+            $this->Dueno->saveField('tipo_usuario', 0);
+        }
+    }
+    $this->redirect(array('controller'=>'duenos', 'action'=>'listaUsuarios'));
+}
+
 public function cargarImagen(){
     $this->autoRender = false;
     if ($this->request->is('post')) {
@@ -178,14 +197,14 @@ $this->Session->destroy();
         if ($this->request->is('post') || $this->request->is('put')) {
             if ($this->Dueno->save($this->request->data)) {
                 $this->Session->setFlash(__('The user has been saved'));
-                return $this->redirect(array('action' => 'index'));
+                return $this->redirect(array('action' => 'profile'));
             }
             $this->Session->setFlash(
                 __('The user could not be saved. Please, try again.')
             );
         } else {
-            $this->request->data = $this->User->read(null, $id);
-            unset($this->request->data['User']['password']);
+            $this->request->data = $this->Dueno->read(null, $id);
+            unset($this->request->data['Dueno']['password']);
         }
     }
 

@@ -23,6 +23,10 @@ class AdopcionesController extends AppController{
     }
    
     public function porAprobar(){
+        $usuario = $this->Dueno->findByUsername($this->Session->read('usuario'));
+        if($usuario['Dueno']['admin']==0){
+            $this->redirect(array('controller'=>'Dueno', 'action'=>'index'));
+        }
         $this->paginate['Adopcione']['limit'] = 5;
         $this->paginate['Adopcione']['order'] = array('Adopcione.id' => 'asc');
         $this->paginate['Adopcione']['conditions']['Adopcione.aprobado'] = 1;
