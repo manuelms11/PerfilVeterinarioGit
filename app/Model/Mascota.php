@@ -30,7 +30,7 @@ class Mascota extends AppModel {
             'className'=>'registrovacunas',//tabla
             'foreignKey'=>'idmascota'//llave foranea de Mascota
          ),   
-        'RegistroDesparacitacion'=>array(
+        'Registrodesparacitacion'=>array(
             'className'=>'registrodesparacitaciones',//tabla
             'foreignKey'=>'iddesparasitante'//llave foranea de Despara
         )

@@ -6,7 +6,7 @@
  * and open the template in the editor.
  */
 
-class RegistrovacunasController extends AppController {
+class RegistrodesparacitacionesController extends AppController {
     public function beforeFilter() {
     parent::beforeFilter();
     // Allow users to register and logout.
@@ -18,15 +18,14 @@ class RegistrovacunasController extends AppController {
     
     public function add(){
         if ($this->request->is('post')) {
-            $this->Registrovacuna->create();
-            if ($this->Registrovacuna->save($this->request->data)) {
-                $this->Session->setFlash(__('Se ha añadido una vacuna'));
+            $this->Registrodesparacitacion->create();
+            if ($this->Registrodesparacitacion->save($this->request->data)) {
+                $this->Session->setFlash(__('Se ha añadido una desparacitacion'));
                 return $this->redirect(array('controller'=>'duenos', 'action' => 'profile'));
             }
             $this->Session->setFlash(
-                __('No se creo la mascota, trate de nuevo')
+                __('No se creo la desparacitacion, trate de nuevo')
             );
         }
-    }
-	
+    }	
 }

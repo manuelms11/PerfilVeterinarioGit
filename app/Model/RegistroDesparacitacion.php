@@ -2,7 +2,7 @@
 App::uses('AppModel', 'Model');
 App::uses('BlowfishPasswordHasher', 'Controller/Component/Auth');
 
-class RegistroDesparacitacion extends AppModel {
+class Registrodesparacitacion extends AppModel {
 
     public $useTable = 'registrodesparacitaciones';
 	

@@ -121,14 +121,14 @@
         <div id='mascotas' class="pull-left col-md-8">
          <p class="title1">Desparacitaciones</p>
         <?php
-        $desps = $mascota['RegistroDesparacitacion'];
+        $desps = $mascota['Registrodesparacitacion'];
         /* @var $desparacitaciones type */
         if ($desps) {
             echo "<ul>";
             foreach ($desps as $desparacitacion) {
                 echo "<li class='petInfo2 col-md-12'>";
                 echo '<div class="pull-left infoPet2">';
-                echo "Tipo: " . $this->requestAction('/desparacitaciones/findDesp/ ' . $desparacitacion['iddesparasitante']);
+                echo "Tipo: " . $this->requestAction('/desparacitantes/findDesp/ ' . $desparacitacion['iddesparasitante']);
                 echo "<br>";
 				//echo "Fecha: " . $vacuna['fechavacuna'];    
                 echo "<br>";

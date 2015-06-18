@@ -6,7 +6,7 @@
  * and open the template in the editor.
  */
 
-class RegistroDesparacitacionController extends AppController {
+class RegistrodesparacitacionController extends AppController {
     public function beforeFilter() {
     parent::beforeFilter();
     // Allow users to register and logout.
@@ -18,8 +18,8 @@ class RegistroDesparacitacionController extends AppController {
     
     public function add(){
         if ($this->request->is('post')) {
-            $this->RegistroDesparacitacion->create();
-            if ($this->RegistroDesparacitacion->save($this->request->data)) {
+            $this->Registrodesparacitacion->create();
+            if ($this->Registrodesparacitacion->save($this->request->data)) {
                 $this->Session->setFlash(__('Se ha añadido una desparacitacion'));
                 return $this->redirect(array('controller'=>'duenos', 'action' => 'profile'));
             }
