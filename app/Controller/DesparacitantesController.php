@@ -16,7 +16,12 @@ class DesparacitantesController extends AppController {
 	}		
     public function index() {}
     
+    public $uses=array('Desparacitante','Dueno');
+    
     public function add(){
+        $usuario = $this->Dueno->findByUsername($this->Session->read('usuario'));
+        if( $usuario['Dueno']['tipo_usuario'] ==0)
+            $this->redirect(array('controller'=>'duenos', 'action'=>'index'));
         if ($this->request->is('post')) {
             $this->Desparacitante->create();
             if ($this->Desparacitante->save($this->request->data)) {
@@ -29,12 +34,10 @@ class DesparacitantesController extends AppController {
         }
     }
 	
-	public function findDesp($id = null){
-		
-		$desp = $this->Desparacitante->findById($id);
-		return $desp['Desparacitante']['nombre'];
-		
-	}
+    public function findDesp($id = null){
+            $desp = $this->Desparacitante->findById($id);
+            return $desp['Desparacitante']['nombre'];
+    }
 	
 	public function add_despet($id = null) {
             // $userId = $this->Auth->user('id');

@@ -16,6 +16,7 @@ class RegistrodesparacitacionController extends AppController {
 }
     public function index() {}
     
+    
     public function add(){
         if ($this->request->is('post')) {
             $this->Registrodesparacitacion->create();
